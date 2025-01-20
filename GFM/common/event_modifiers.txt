@@ -335,6 +335,12 @@ relutanct_figher = {
     icon = 16
 }
 
+imperial_disapproval = {
+	land_organisation = -0.5
+    mobilisation_size = -2.0
+	org_regain = -0.5
+}
+
 native_assimilation_act_policy = {
     badboy = 0.01
     icon = 18
@@ -3311,11 +3317,6 @@ drang_nach_osten = {
     icon = 19
 }
 
-drang_nach_osten_country = {
-    global_immigrant_attract = 0.5
-    icon = 17
-}
-
 free_city_krakow = {
     max_tariff = -0.25
     max_tax = 0.25
@@ -5320,7 +5321,7 @@ military_fueros = {
     land_unit_start_experience = -5
     naval_unit_start_experience = -5
     mobilisation_size = -0.025
-    mobilisation_economy_impact = 1.35
+    mobilization_economy_impact = 1.35
 	global_pop_consciousness_modifier = 0.01
 	leadership_modifier = -0.2
 }

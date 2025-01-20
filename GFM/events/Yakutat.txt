@@ -10328,55 +10328,19 @@ country_event = {
         tag = QNG
         has_country_flag = beiyang_fleet_established
 		war = no
-		OR = {
-			JAP = {
-				war = no
-				owns = 1661
-				NOT = { truce_with = THIS }
-			}
-			TKG = {
-				war = no
-				owns = 1661
-				NOT = { truce_with = THIS }
-			}
+		JAP = {
+			war = no
+			owns = 1661
+			NOT = { truce_with = THIS }
 		}
 		month = 7
     }
 
-    mean_time_to_happen = {
-        days = 13
-    }
+    mean_time_to_happen = { days = 1 }
 
     option = {
         name = "Uh oh..."
-		random_owned = {
-			limit = {
-				owner = {
-					JAP = {
-						war = no
-						owns = 1661
-						NOT = { truce_with = THIS }
-					}
-				}
-			}
-			owner = {
-				JAP = { country_event = { id = 16121933 days = 2 } }
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					TKG = {
-						war = no
-						owns = 1661
-						NOT = { truce_with = THIS }
-					}
-				}
-			}
-			owner = {
-				TKG = { country_event = { id = 16121933 days = 2 } }
-			}
-		}
+		JAP = { country_event = { id = 16121933 days = 2 } }
     }
 }
 
@@ -12196,10 +12160,7 @@ country_event = {
 
 	trigger = {
 		year = 1871
-		OR = {
-			tag = TKG
-			tag = JAP
-		}
+		tag = JAP
 		OR = {
 			QNG = { owns = 2681 }
 			TPG = { owns = 2681 }
@@ -14050,13 +14011,7 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { owner = { TKG = { exists = yes ai = no } } }
-			owner = {
-				TKG = { country_event = 18482139 }
-			}
-		}
-		random_owned = {
-			limit = { owner = { TKG = { ai = yes } USA = { ai = yes } JAP = { ai = yes } ENG = { ai = yes } } }
+			limit = { owner = { USA = { ai = yes } JAP = { ai = yes } ENG = { ai = yes } } }
 			owner = {
 				HAW = { country_event = 184821391 }
 			}
@@ -14126,7 +14081,6 @@ country_event = {
 	option = {
         name = "Welcome back, Queen Lili."
 		set_global_flag = hawwai
-		create_alliance = TKG
 		create_alliance = JAP
 		create_alliance = ENG
 		create_alliance = USA
@@ -18216,8 +18170,6 @@ country_event = {
 			remove_country_modifier = uncivilized_isolationism
 			remove_country_modifier = trade_restrictions
 			remove_country_modifier = sayings_of_the_dutch
-			remove_country_modifier = rangaku
-			remove_country_modifier = sakoku
 			remove_country_modifier = western_presence
 			remove_country_modifier = isolationist_foreign_naval_officers
 			remove_country_modifier = isolationist_foreign_naval_schools
@@ -36004,12 +35956,12 @@ country_event = {
     }
 
 }
+
 country_event = {
     id = 18482521
     title = "The Blood Tax Riots"
     desc = "BLOODTAXDESC"
     picture = "blood_tax"
-
     fire_only_once = yes
 
     trigger = {
@@ -36023,10 +35975,7 @@ country_event = {
 		owns = 1667
 		owns = 1641
 		owns = 1658
-		OR = {
-			tag = JAP
-			tag = TKG
-		}
+		tag = JAP
     }
 
     mean_time_to_happen = { months = 1 }
@@ -36084,8 +36033,8 @@ country_event = {
 			factor = 1
 		}
     }
-
 }
+
 country_event = {
     id = 18482522
     title = "The Conquest of the Bisa"
